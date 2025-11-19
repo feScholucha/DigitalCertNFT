@@ -1,0 +1,50 @@
+<!-- MVP simples em html+javascript simples -->
+<!-- Fortemente recomendo utilizar uma framework para um deploy mais complexo -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados NFT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>SSC0958 - Certificados Digitais em NFT</h1>
+        <button id="connectButton">Conectar Carteira</button>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Painel da Instituição (Admin)</h2>
+            <p>Conecte-se com a carteira de dono para emitir certificados.</p>
+            <div class="form-group">
+                <label for="alunoAddress">Endereço do Aluno:</label>
+                <input type="text" id="alunoAddress" placeholder="0x...">
+            </div>
+            <div class="form-group">
+                <label for="tokenURI">Link dos Metadados (IPFS):</label>
+                <input type="text" id="tokenURI" placeholder="ipfs://...">
+            </div>
+            <button id="emitButton">Emitir Certificado</button>
+        </section>
+
+        <section class="card">
+            <h2>Verificador Público</h2>
+            <p>Qualquer pessoa pode verificar a autenticidade de um certificado.</p>
+            <div class="form-group">
+                <label for="tokenId">ID do Certificado (Token ID):</label>
+                <input type="text" id="tokenId" placeholder="1">
+            </div>
+            <button id="verifyButton">Verificar</button>
+            <div id="result">
+                </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.6.9/dist/ethers.umd.min.js" type="application/javascript"></script>
+    <script src="app.js"></script>
+</body>
+</html>
